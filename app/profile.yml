@@ -1,0 +1,88 @@
+# Всё содержимое визитки. Поправьте тексты здесь и перезапустите приложение (в режиме --reload подхватится сразу).
+profile:
+  name: Александр Долгошеев
+  title: Java Backend Developer
+  location: ""   # например, "Москва · готов к удалёнке"; пустая строка скрывает поле
+  about: >-
+    Пишу серверную часть на Java и Spring Boot: REST API, безопасность на JWT,
+    работа с PostgreSQL через JPA/Hibernate, миграции на Liquibase, упаковка в Docker.
+    Люблю, когда код покрыт тестами и проект запускается одной командой.
+    Сейчас расширяю кругозор: Go и Python, включая анализ данных для инженерных задач.
+
+  contacts:
+    - type: email
+      label: al.dolgosheev@gmail.com
+      url: mailto:al.dolgosheev@gmail.com
+    - type: github
+      label: github.com/aDolgosheev
+      url: https://github.com/aDolgosheev
+    # - type: telegram
+    #   label: "@username"
+    #   url: https://t.me/username
+
+  skills:
+    - group: Языки
+      items: [Java 17/21, SQL, Python, Go]
+    - group: Фреймворки
+      items: [Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Javalin]
+    - group: Данные
+      items: [PostgreSQL, H2, Liquibase, MapStruct]
+    - group: Инфраструктура
+      items: [Docker, Docker Compose, Maven, Gradle, Git]
+    - group: Качество
+      items: [JUnit 5, Mockito, AssertJ, Swagger / OpenAPI]
+
+  projects:
+    - name: Bank Card Management
+      description: >-
+        REST API для управления банковскими картами: роли администратора и пользователя,
+        блокировка и активация карт, переводы между своими картами, поиск с пагинацией.
+      stack: [Java 17, Spring Boot 3, Spring Security, JWT, PostgreSQL, Liquibase, Docker]
+      url: https://github.com/aDolgosheev/bank-card-management
+    - name: Task Tracker API
+      description: >-
+        Бэкенд трекера задач: проекты, упорядоченные колонки-состояния и задачи в них.
+      stack: [Spring Boot 3, Spring Data JPA, Gradle]
+      url: https://github.com/aDolgosheev/task-tracker-api
+    - name: Облачное хранилище
+      description: >-
+        Дипломный проект Нетологии: сервер для загрузки, скачивания, переименования
+        и удаления файлов с авторизацией пользователей.
+      stack: [Spring Boot, Spring Security, Maven, Docker Compose]
+      url: https://github.com/aDolgosheev/netology-java-developer
+    - name: Обмен валют
+      description: >-
+        REST API валют и курсов с расчётом конвертации, на чистых сервлетах, без фреймворка.
+      stack: [Java, Servlets, JDBC, Maven]
+      url: https://github.com/aDolgosheev/java-backend-learning-course
+    - name: CRUD App
+      description: >-
+        Тестовое задание на Java Backend: CRUD над пользователями с маппингом DTO.
+      stack: [Spring Boot, Spring Security, PostgreSQL, MapStruct, Gradle]
+      url: https://github.com/aDolgosheev/crud-app-telros
+    - name: File Filter CLI
+      description: >-
+        Консольная утилита для тестового задания ШИФТ: раскладывает строки из файлов
+        по типам (целые, вещественные, строки) и считает статистику.
+      stack: [Java, Apache Commons CLI, Maven]
+      url: https://github.com/aDolgosheev/shift-test-app
+    - name: VacuumGuard
+      description: >-
+        Система диагностики вакуумных испытательных стендов.
+      stack: [Python, pandas, NumPy]
+      url: https://github.com/aDolgosheev/vacuumguard
+      status: в работе
+
+  education:
+    - title: Java-разработчик
+      organization: Нетология
+      period: ""
+      url: https://github.com/aDolgosheev/netology-java-developer
+    - title: Java backend learning course
+      organization: Сергей Жуков (zhukovsd)
+      period: ""
+      url: https://zhukovsd.github.io/java-backend-learning-course/
+    - title: Java-разработчик
+      organization: Хекслет
+      period: ""
+      url: https://github.com/aDolgosheev/hexlet-assignments

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Александр Долгошеев — Java Backend Developer</title>
+    <meta name="description" content="Сайт-визитка Java backend-разработчика Александра Долгошеева">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23e76f2e'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='white' text-anchor='middle'>AD</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="container topbar__inner">
+        <a href="#top" class="logo">~/dolgosheev</a>
+        <nav class="nav">
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Стек</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">◐</button>
+    </div>
+</header>
+
+<main id="top">
+    <section class="hero container">
+        <p class="hero__prompt"><span class="accent">$</span> whoami</p>
+        <h1 class="hero__name" data-field="name">&nbsp;</h1>
+        <p class="hero__title" data-field="title"></p>
+        <p class="hero__location" data-field="location"></p>
+        <div class="hero__contacts" id="heroContacts"></div>
+    </section>
+
+    <section class="section container" id="about">
+        <h2 class="section__title"><span class="accent">01.</span> Обо мне</h2>
+        <p class="about" data-field="about"></p>
+    </section>
+
+    <section class="section container" id="skills">
+        <h2 class="section__title"><span class="accent">02.</span> Стек</h2>
+        <div class="skills" id="skills-list"></div>
+    </section>
+
+    <section class="section container" id="projects">
+        <h2 class="section__title"><span class="accent">03.</span> Проекты</h2>
+        <div class="projects" id="projects-list"></div>
+    </section>
+
+    <section class="section container" id="education">
+        <h2 class="section__title"><span class="accent">04.</span> Обучение</h2>
+        <ul class="education" id="education-list"></ul>
+    </section>
+
+    <section class="section container" id="contact">
+        <h2 class="section__title"><span class="accent">05.</span> Связаться</h2>
+        <div class="contact">
+            <p class="contact__lead">Есть вакансия, проект или вопрос? Напишите, отвечу на почту.</p>
+            <form class="form" id="contactForm" novalidate>
+                <label class="form__field">
+                    <span>Имя</span>
+                    <input name="name" maxlength="100" autocomplete="name" required>
+                    <small class="form__error" data-error="name"></small>
+                </label>
+                <label class="form__field">
+                    <span>Email</span>
+                    <input name="email" type="email" maxlength="200" autocomplete="email" required>
+                    <small class="form__error" data-error="email"></small>
+                </label>
+                <label class="form__field form__field--wide">
+                    <span>Сообщение</span>
+                    <textarea name="message" rows="5" maxlength="2000" required></textarea>
+                    <small class="form__error" data-error="message"></small>
+                </label>
+                <div class="form__actions">
+                    <button class="btn" type="submit">Отправить</button>
+                    <p class="form__status" id="formStatus" role="status"></p>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer container">
+    <span>© <span id="year"></span> <span data-field="name"></span></span>
+    <span class="muted">FastAPI · Python</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
