@@ -25,6 +25,8 @@ def test_profile_is_served_from_config(client):
     assert body["name"] == "Александр Долгошеев"
     assert "github" in [c["type"] for c in body["contacts"]]
     assert body["projects"][0]["name"]
+    assert body["experience"][0]["company"]
+    assert body["experience"][0]["highlights"]
 
 
 def test_index_page_is_served(client):

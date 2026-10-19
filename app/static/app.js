@@ -34,6 +34,17 @@
             }, [el('span', { html: ICONS[c.type] || ICONS.link }).firstChild, c.label])
         ));
 
+        document.getElementById('experience-list').replaceChildren(...(p.experience || []).map(job =>
+            el('li', { class: 'job' }, [
+                el('p', { class: 'job__period', text: job.period }),
+                el('div', { class: 'job__body' }, [
+                    el('h3', { class: 'job__role', text: job.role }),
+                    el('p', { class: 'job__company', text: job.company }),
+                    el('ul', { class: 'job__highlights' }, (job.highlights || []).map(h => el('li', { text: h })))
+                ])
+            ])
+        ));
+
         document.getElementById('skills-list').replaceChildren(...(p.skills || []).map(g =>
             el('div', { class: 'skill-group' }, [el('h3', { text: g.group }), tags(g.items)])
         ));
